@@ -1,0 +1,494 @@
+@import '~bootstrap/scss/bootstrap';
+body{
+    background-color: #0e0e0e;
+    overflow-y: hidden;
+    color: white;
+
+}
+.main{
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+
+}
+
+.header-style{
+    border-bottom: 1px solid rgba(173, 216, 230, 0.3);
+}
+
+.logo{
+    height: 71px;
+    img{
+        width: 40px;
+        margin-right: 1em;
+        transition: all .3s;
+    }
+}
+
+.owner{
+    h1{
+        color: white;
+        a{
+            font-size: 22px;
+            ;
+            padding: 10px;
+            font-weight: bold;
+            transition: all .5s;
+            &:hover {
+                color: lightblue;
+            }
+
+        }
+    }
+}
+
+.guest-header{
+    border-bottom: 1px solid rgba(173, 216, 230, 0.3);
+}
+
+header{
+
+    .np-btn-submit{
+        background-color: white;
+        color: #303030;
+        font-weight: bold;
+        font-size: .9em;
+
+
+        &:hover{
+            background-color: lightblue;
+            color: #303030;
+        }
+    }
+
+    .np-form-text{
+        padding: 5px;
+        background-color: white;
+        outline: none;
+        border: 1px solid lightblue;
+        border-radius: 10px;
+
+
+        &:focus{
+            background-color: lightblue;
+        }
+    }
+
+    .navbar{
+        height: 70px;
+        padding: 0;
+        margin: 0;
+    }
+
+    height: 70px;
+
+
+
+    .nav-link{
+        color: white;
+        font-size: .9em;
+        font-weight: bold;
+
+
+        &:hover {
+            color: lightblue;
+        }
+
+    }
+
+    .project-owner{
+        padding-left: 50px;
+        h1{
+            font-size: 20px;
+            ;
+            font-weight: bold;
+        }
+    }
+
+    .np-link{
+        position: relative;
+        top: 0;
+        transition: all .5s;
+
+        &::after{
+            content: '';
+            width: 105%;
+            border: 2px solid lightblue;
+            border-radius: 2px;
+            position: absolute;
+            top: 50px;
+            left: 0;
+            opacity: 0;
+            transition: all .5s;
+        }
+
+        &:hover::after{
+            opacity: 1;
+        }
+
+        i{
+            margin-left: 10px;
+        }
+    }
+}
+
+.aside{
+    color: white;
+    height: calc(100vh - 70px);
+    border-right: 1px solid rgba(173, 216, 230, 0.3) ;
+
+    li{
+        padding-top: 30px;
+    }
+
+    a{
+
+        font-size: .75em;
+        font-weight: bold;
+        transition: all .3s;
+
+        &:hover {
+            color: lightblue;
+        }
+
+        i{
+            margin-right: 5px;
+        }
+    }
+}
+
+
+
+.index{
+    h3{
+        text-align: center;
+        font-size: 22px;
+        padding: 30px 0;
+        font-weight: bold;
+    }
+
+    table{
+
+
+
+        img{
+            width: 100px;
+            height: 50px;
+        }
+    }
+}
+
+//* Reset *//
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+
+//* Reset *//
+
+//* Card *//
+.np-card{
+
+    .technology{
+        opacity: 0;
+        transition: all .3s;
+        font-size: .8em;
+        display: inline;
+        background-color: darkgrey;
+        padding: 5px 8px;
+        border-radius: 10px;
+    }
+
+    &:hover .technology{
+        opacity: 1;
+    }
+
+   &.index-card{
+        max-height: 400px;
+        overflow-y: auto;
+    }
+    cursor: pointer;
+    border-radius: 20px;
+
+    h5{
+        font-size: .85em;
+        transition: all .3s;
+    }
+
+    .content{
+        h3{
+            font-size: 1.1em;
+            transition: all .3s;
+            padding: 25px 0 0 0;
+
+            a{
+                &:hover{
+                    color: lightblue;
+                }
+            }
+        }
+    }
+    .thumb{
+        overflow: hidden;
+        border-radius: 10px;
+        width: 80%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all .5s;
+        }
+    }
+
+    .edit-discard{
+
+        transition: all .3s;
+
+        .np-btn{
+            color: white;
+
+            &:hover{
+                color: lightblue;
+            }
+        }
+    }
+
+    &:hover {
+        box-shadow: rgba(173, 216, 230, 0.2) 0px 7px 29px 0px;
+        img{
+            transform: scale(1.2);
+        }
+
+        h3, h5{
+            color: lightblue;
+        }
+
+        .edit-discard{
+            opacity: 1;
+        }
+    }
+
+}
+//* Card *//
+
+//* Login e registrazione *//
+.np-card-header{
+    background-color: #303030;
+    font-weight: bold;
+}
+
+.np-card-body{
+    background-color: #303030;
+
+}
+//* Login e registrazione *//
+
+
+
+//* Show *//
+
+.show{
+    height: 65vh;
+
+    .client{
+        span{
+            margin-left: 10px;
+            color: lightblue;
+        }
+    }
+
+    .project-title{
+        max-width: 350px;
+        font-size: 1.5em;
+    }
+
+}
+
+
+//* Show *//
+
+//* page-link *//
+
+nav .pagination{
+    margin: 0;
+
+    .page-link{
+        border: 1px solid white;
+        background-color: #303030;
+        color: white;
+        padding: 5px 12px ;
+        margin: 10px;
+
+        &:hover{
+            background-color: lightblue;
+            color: black;
+        }
+    }
+
+
+    .page-item.active .page-link{
+        border: 1px solid lightblue;
+        background-color: lightblue ;
+        color: black;
+    }
+}
+
+//* page-link *//
+
+
+//* order btn *//
+.np-btn-order{
+    background-color: #303030;
+    margin: 10px;
+    color: lightblue;
+    transition: all .5s;
+    font-size: .9em;
+    font-weight: bold;
+    &:hover{
+        background-color: lightblue;
+        color: #303030;
+        transform: scale(1.05);
+    }
+}
+//* order btn *//
+
+//* form *//
+
+.form-container{
+    .resize{
+        max-width: 300px;
+    }
+
+    .np-btn{
+        background-color: white;
+        font-size: .9em;
+        font-weight: bold;
+        transition: all .3s;
+        &:hover{
+            background-color: lightblue;
+            color: #303030;
+        }
+    }
+
+    h3{
+        padding-bottom: 50px;
+        color: lightblue;
+        font-weight: bold;
+    }
+}
+
+.ck{
+    color: black;
+    height: 200px;
+
+}
+//* form *//
+
+
+//*modal*//
+.modal-header, .modal-body, .modal-footer{
+    background-color: #303030;
+}
+
+.modal .delete{
+    background-color: rgb(120, 61, 61);
+}
+//*modal*//
+
+//*badge*//
+.badge{
+    background-color: cornflowerblue;
+    &.css{
+        background-color: rgb(219, 146, 12);
+    }
+    &.php{
+        background-color: brown;
+    }
+    &.html{
+        background-color: blue;
+    }
+    &.javascript{
+        background-color: rgb(9, 153, 88);
+
+    }
+}
+//*badge*//
+
+//* types *//
+.types{
+
+    h1{
+        font-size: 2em;
+        text-align: center;
+        color: lightblue;
+        margin-bottom: 50px;
+    }
+
+    .type{
+        border-bottom: 1px solid rgba(173, 216, 230, 0.3);
+    }
+}
+
+.type-panel{
+    h3{
+        color: lightblue;
+        font-size: 22px;
+        font-weight: bold;
+    }
+    .np-btn.send {
+        background-color: rgb(129, 160, 170);
+        color: white;
+    }
+
+    .table{
+        border-radius: 10px;
+        background-color: #303030;
+
+        th{
+            color: lightblue;
+            border-bottom: 1px solid rgba(173, 216, 230, 0.3);
+        }
+
+        td{
+            padding: 15px;
+            color: white;
+        }
+
+        tr{
+           border-bottom: 1px solid rgba(173, 216, 230, 0.3)
+        }
+
+        tr:last-of-type{
+            border-bottom: none;
+        }
+
+        .type-name{
+            background-color: #303030;
+            color: white;
+            outline: none;
+            border: none;
+            padding: 5px;
+            &:focus{
+                border: 1px solid rgba(173, 216, 230, 0.3);
+            }
+        }
+        .np-btn.send {
+            background-color: rgb(129, 160, 170);
+            color: white;
+        }
+        .np-btn{
+            background-color: rgb(120, 61, 61);
+            color: white
+        }
+    }
+
+}
+//* types *//
+
