@@ -105,7 +105,11 @@ class ProjectController extends Controller
      */
     public function show(Project $project)
     {
-        return view('admin.projects.show', compact('project'));
+        if($project->user_id === Auth::id()){
+            return view('admin.projects.show', compact('project'));
+        }else{
+            return redirect()->route('admin.projects.index')->with('message','Non sei autorizzato/a a vedere questo progetto');
+        }
     }
 
     /**
@@ -118,7 +122,11 @@ class ProjectController extends Controller
     {
         $types = Type::all();
         $technologies = Technology::all();
-        return view('admin.projects.edit', compact('project','types','technologies'));
+        if($project->user_id === Auth::id()){
+            return view('admin.projects.edit', compact('project','types','technologies'));
+        }else{
+            return redirect()->route('admin.projects.index')->with('message','Non sei autorizzato/a a modificare questo progetto');
+        }
     }
 
     /**
